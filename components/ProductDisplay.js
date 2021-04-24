@@ -65,7 +65,7 @@ app.component('product-display', {
     },
     methods: {
         addToCart(){
-            this.cart += 1 //v-on shorthandle = @
+            this.$emit('add-to-cart', this.variants[this.selectedVariant].id)
         },
 
         removeFromCart(){
